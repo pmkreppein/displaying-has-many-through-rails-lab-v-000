@@ -1,10 +1,10 @@
-Doctor Name: <%= @doctor.name %>
-Department: <%= @doctor.department %><br>
+Doctor Name: <%= @doc.name %>
+Department: <%= @doc.department %><br>
 <ul>
-<li>
-<% @doctor.appointments.each do |app| %>
-  <%= app.readable_time%>
-  <%= link_to app.patient.name, patient_path(app.patient) %><br>
-<% end %>
-</li>
+  <li>
+    <% @doc.appointments.each do |app| %>
+    <%= app.readable_time%>
+    <%= link_to app.patient.name, patient_path(app.patient) %><br>
+    <% end %>
+  </li>
 </ul>
